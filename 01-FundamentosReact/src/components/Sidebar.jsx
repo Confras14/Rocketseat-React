@@ -14,7 +14,7 @@ export function Sidebar() {
         <img src="https://github.com/Confras14.png" />
 
         <strong>Lucas Conrado</strong>
-        <span>Developer Front end</span>
+        <span>Dev Front-end</span>
       </div>
 
       <footer>
