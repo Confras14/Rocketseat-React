@@ -1,6 +1,6 @@
 import style from './Sidebar.module.scss'
 
-import editarSVG from "../assets/Frame.svg"
+import { PencilLine } from 'phosphor-react'
 
 export function Sidebar() {
   return(
@@ -11,13 +11,15 @@ export function Sidebar() {
       />
       
       <div className={style.profile}>
+        <img src="https://github.com/Confras14.png" />
+
         <strong>Lucas Conrado</strong>
         <span>Developer Front end</span>
       </div>
 
       <footer>
         <a href="#">
-          <img src={editarSVG} alt="" />
+          <PencilLine size={20} />
           Editar seu perfil
         </a>
       </footer>
