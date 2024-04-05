@@ -1,0 +1,115 @@
+.post {
+  background: var(--gray-700);
+  border-radius: 8px;
+  padding: 2.5rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  
+  & > time {
+    font-size: .875rem;
+    line-height: 1.6;
+    color: var(--gray-400);
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    & > img {
+      box-sizing: initial;
+      width: 3rem;
+      height: 3rem;
+      border: 4px solid var(--gray-800);
+      outline: 2px solid var(--green-500);
+      border-radius: 8px;
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+
+      & > strong {
+        line-height: 160%;
+      }
+      
+      & > span {
+        font-size: .875rem;
+        line-height: 1.6;
+        color: var(--gray-400);
+      }
+    }
+  }  
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 13rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray-600);
+  margin-bottom: 1.5rem;
+
+  & > p {
+    color: var(--gray-300);
+    line-height: 160%;
+    
+    & > a {
+      color: var(--green-500);
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-around;
+  width: 100%;
+
+  & > p {
+    color: var(--gray-100);
+    line-height: 1.6;
+    font-weight: 700;
+  }
+
+  & > textarea {
+    background: var(--gray-900);
+    border: none;
+    border-radius: 8px;
+    min-width: 100%;
+    height: 6rem;
+    resize: none;
+    padding: 1rem;
+    color: var(--gray-300);
+    line-height: 1.4;
+    
+    &::selection {
+      border-color: var(--green-500);
+    }
+  }
+
+  & > input[type='button'] {
+    background: var(--green-500);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+
+    &:hover {
+      background: var(--green-700);
+      color: var(--white);
+    }
+  }
+}

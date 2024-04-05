@@ -1,37 +1,41 @@
 import style from './Post.module.scss'
 
 export function Post () {
+  let dateDay = `2024/04/04`
+  let dateTime = `21:28`
+  let date = `${dateDay} ${dateTime}`
+
   return(
     <article className={style.post}>
-      <header>
+      <header className={style.header}>
           <div>
-            <img src="https://github.com/confras14.png" />
-            <div className={style.author}>
+            <img className={style.a} src="https://github.com/confras14.png" />
+            <div>
               <strong>Jane Cooper</strong>
               <span>Dev Front-end</span>
             </div>
           </div>
           
-          <span>Públicado há 1h</span>
+          <time
+            title={`${dateDay} às ${dateTime}h`}
+            dateTime={date}
+          >
+            Públicado há 1h
+          </time>
       </header>
 
-      <main>
-        <div className="texts">
-          <h2>Fala Galera ✌</h2>
+      <div className={style.content}>
+        <p>Fala Galera ✌</p>
+        <p>Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀</p>
+        <p><a href=''>👉 jane.design/doctorcare</a></p>
+        <p><a href=''>#novoprojeto #nlw #rocketseat</a></p>
+      </div>
 
-          <p>Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀</p>
-
-          <p><span>👉 jane.design/doctorcare</span></p>
-
-          <p><span>#novoprojeto #nlw #rocketseat</span></p>
-        </div>
-
-        <div className="feedback">
-          <p>Deixe seu feedback</p>
-          <textarea placeholder='Escreva aqui seu feedback!'></textarea>
-          <button>Publicar</button>
-        </div>
-      </main>
+      <div className={style.feedback}>
+        <p>Deixe seu feedback</p>
+        <textarea placeholder='Escreva aqui seu feedback!'></textarea>
+        <input type="button" value="Publicar" />
+      </div>
     </article>
   )
 }
